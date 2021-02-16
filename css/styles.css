@@ -5,12 +5,22 @@
   --background-color: rgb(47, 48, 58);
   --heading-color: rgb(33, 33, 33);
   --content-color: rgb(117, 117, 117);
-  --section-color: rgb(245, 244, 250);
+  --section-color: rgb(245, 245, 250);
   --mailtel-color: rgba(255, 255, 255, 0.6);
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 address {
@@ -22,8 +32,8 @@ ul {
 }
 
 img {
-  width: 370px;
-  min-height: 294px;
+  max-width: 100%;
+  min-height: 100%;
   display: block;
 }
 
@@ -32,7 +42,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
@@ -90,10 +101,11 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   outline: 4px solid #ff5e00;
+  background-color: var(--background-color);
 }
 
 .site-nav {
-  margin: 32px 331px 32px 93px;
+  margin: 32px 331px 32px auto;
 }
 
 .mailtel-header {
@@ -107,17 +119,18 @@ h6 {
 .header,
 .main-info {
   background-color: var(--white-text);
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .main-btn {
+  max-width: 200px;
+  min-height: 50px;
+  margin-top: 30px;
+  padding: 10px 32px;
+
   border-radius: 4px;
-  width: 200px;
-  height: 50px;
   background-color: var(--blue-text);
   color: var(--white-text);
-  padding: 10px 32px;
-  margin-top: 30px;
   outline: 4px solid #ff5e00;
 }
 
@@ -131,24 +144,27 @@ h6 {
   color: var(--content-color);
 }
 
-a .phone-number {
-  font-family: 'Roboto', sans-serif;
+.container-nav .phone-number {
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .logo {
-  color: var(--blue-text);
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
+  letter-spacing: 0.03em;
   margin-top: 24px;
   margin-bottom: 25px;
+
+  text-decoration: none;
+  color: var(--blue-text);
   outline: 4px solid #ff5e00;
 }
 
@@ -162,13 +178,14 @@ a .phone-number {
 }
 
 .header-links {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.02em;
+
   text-decoration: none;
-  display: block;
 }
 
 .header-links:hover,
@@ -177,7 +194,7 @@ a .phone-number {
 }
 
 .nav-items .item {
-  outline: 1px solid red;
+  outline: 2px solid red;
 }
 
 .nav-items .item + .item {
@@ -201,19 +218,21 @@ a .phone-number {
   display: flex;
 }
 
-.main-section,
-.bg-footer {
+.main-section {
   background-color: var(--background-color);
 }
 
 .main-title {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
+  font-family: Roboto, sans-serif;
   font-style: normal;
+  font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  color: var(--white-text);
+  text-align: center;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  color: var(--white-text);
   outline: 4px solid #ff5e00;
 }
 
@@ -227,11 +246,9 @@ a .phone-number {
 .container-skills {
   width: 1200px;
   min-height: 101px;
-  margin: 94px auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: auto;
+  padding: 94px 15px;
   outline: 2px solid #ff5e00;
-  box-sizing: border-box;
   display: flex;
 }
 
@@ -242,13 +259,14 @@ a .phone-number {
 }
 
 .item > .text-color {
-  width: 270px;
-  display: block;
-  padding: 0;
-  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  padding: 0;
+  margin: 0;
 }
 
 .skill-items .item + .item {
@@ -256,15 +274,28 @@ a .phone-number {
 }
 
 .command-image .third-headings {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
   text-align: center;
+  letter-spacing: 0.03em;
   padding-top: 30px;
 }
 
 .command-image .text-color {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.18;
   text-align: center;
-  padding-top: 10px;
+  letter-spacing: 0.03em;
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .command-section {
@@ -285,10 +316,11 @@ a .phone-number {
 .command-image {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 50px;
+  padding-top: 0;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  min-height: 368px;
 }
 
 .command-image .command-item + .command-item {
@@ -296,22 +328,25 @@ a .phone-number {
 }
 
 .item .third-headings {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-family: Roboto, sans-serif;
   font-style: normal;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .second-headings {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-family: Roboto, sans-serif;
   font-style: normal;
+  font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  letter-spacing: 0.03em;
+  padding-bottom: 50px;
 }
 
 .footer-studio {
@@ -319,12 +354,14 @@ a .phone-number {
 }
 
 .address-footer {
-  color: var(--white-text);
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: var(--white-text);
 }
 
 .container-footer .container {
@@ -342,15 +379,17 @@ a {
 }
 
 .logo-footer {
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  color: var(--blue-text);
-  font-size: 26px;
+  font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 26px;
   line-height: 1.2;
-  padding-top: 60px;
+  letter-spacing: 0.03em;
   margin-bottom: 20px;
+  padding-top: 60px;
+
+  text-decoration: none;
+  color: var(--blue-text);
 }
 
 .logo-footer:hover,
@@ -359,12 +398,14 @@ a {
 }
 
 .mailtel-footer {
-  color: var(--mailtel-color);
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: var(--mailtel-color);
 }
 
 .command-section {
@@ -386,17 +427,114 @@ a {
 }
 
 .portfolio-buttons {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.62;
+  padding: 6px 22px;
+  border-radius: 4px;
   border: none;
+  color: rgba(33,33,33,1)
   filter: drop-shadow(0px 4px 4px 0px);
+  outline: 4px solid #ff5e00;
 }
 
-.portfolio-buttons:hover {
+.portfolio-buttons:hover,
+.portfolio-buttons:focus {
   border: 2px solid var(--blue-text);
 }
 
-.portfolio-buttons:focus,
-.portfolio-buttons:active {
+.portfolio-buttons:active,
+.portfolio-buttons:visited {
   background-color: var(--blue-text);
   color: var(--white-text);
-  border: none;
+  border: 2px solid var(--blue-text);
+}
+
+.section-buttons {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 4px solid #008080;
+}
+
+.container-buttons {
+  padding-top: 94px;
+  padding-bottom: 34px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 611px;
+  min-height: 54px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.buttons:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.card-set {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.card-set > .portfolio-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.bg-footer > .container {
+  margin-top: 30px;
+}
+
+.card-thumb {
+  outline: 2px solid #ff0000;
+}
+
+.card {
+  box-shadow: 0 4px 4px 0 #00000025;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card-heading {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.card-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  padding-top: 4px;
+}
+
+.portfolio-item * {
+  outline: 2px solid #a52a2a;
+}
+
+.card-content {
+  max-width: 322px;
+  min-height: 70px;
+  margin: 20px 24px;
 }
