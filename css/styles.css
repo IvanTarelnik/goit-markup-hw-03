@@ -54,13 +54,10 @@ p {
 }
 
 .header {
-  width: 1600px;
-  padding-top: 23px;
-  padding-bottom: 41px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 24px 15px 25px;
+  border-bottom: 1px solid #ECECEC;
 
   outline: 2px solid #ff5e00;
 }
@@ -98,7 +95,6 @@ p {
 
 .container-footer {
   display: flex;
-  max-width: 1600px;
   min-height: 252px;
   margin-left: auto;
   margin-right: auto;
@@ -213,7 +209,6 @@ p {
 
 .main-section {
   display: flex;
-  max-width: 1600px;
   height: auto;
   text-align: center;
   margin-left: auto;
@@ -242,23 +237,13 @@ p {
 }
 
 .main-info {
-  max-width: 1600px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 94px;
   padding-bottom: 94px;
 
   outline: 4px solid #008080;
-}
-
-.container-skills {
-  max-width: 1200px;
-  height: auto;
-  margin: auto;
-  padding: 94px 15px;
-  display: flex;
-
-  outline: 2px solid #ff5e00;
 }
 
 .skill-items {
@@ -314,7 +299,6 @@ p {
 }
 
 .command-section {
-  max-width: 1600px;
   min-height: 648px;
   margin-left: auto;
   margin-right: auto;
@@ -479,7 +463,6 @@ a {
 }
 
 .section-buttons {
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 94px;
