@@ -476,7 +476,7 @@ a {
   justify-content: space-between;
   max-width: 611px;
   min-height: 54px;
-  margin: 0 auto;
+  margin: 0 auto 34px;
   padding-left: 0;
 }
 
@@ -496,7 +496,6 @@ a {
   list-style: none;
   margin-right: -30px;
   margin-bottom: -30px;
-  padding-top: 34px;
 }
 
 .card-set > .portfolio-item {
